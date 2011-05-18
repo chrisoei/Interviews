@@ -1,4 +1,6 @@
 Interviews::Application.routes.draw do
+  resources :questions
+
   resources :companies
 
   # The priority is based upon order of creation:
