@@ -10,6 +10,20 @@
   <%= @company.website %>
 </p>
 
+<p>
+  <b>Coordinator:</b>
+  <%= @company.coordinator_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @company.coordinator_email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @company.coordinator_phone %>
+</p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

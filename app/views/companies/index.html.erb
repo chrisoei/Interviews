@@ -4,15 +4,18 @@
   <tr>
     <th>Name</th>
     <th>Website</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Coordinator</th>
+    <th>Email</th>
+    <th>Phone</th>
   </tr>
 
 <% @companies.each do |company| %>
   <tr>
     <td><%= company.name %></td>
     <td><%= company.website %></td>
+    <td><%= company.coordinator_name %></td>
+    <td><%= company.coordinator_email %></td>
+    <td><%= company.coordinator_phone %></td>
     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
     <td><%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %></td>
