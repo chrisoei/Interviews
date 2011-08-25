@@ -1,3 +1,6 @@
+require 'lock'
+
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  lock
+#  protect_from_forgery
 end

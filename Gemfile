@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'lock'
+
 gem 'rails', '3.0.7'
 
 # Bundle edge Rails instead:
