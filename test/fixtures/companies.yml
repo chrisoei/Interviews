@@ -1,9 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  website: MyString
+  name: MyString1a
+  website: MyString1b
 
 two:
-  name: MyString
-  website: MyString
+  name: MyString2a
+  website: MyString2b
+
+stark:
+  name: Stark Enterprises
+  website: www.stark.com
+

@@ -3,6 +3,9 @@ require 'test_helper'
 class CompaniesControllerTest < ActionController::TestCase
   setup do
     @company = companies(:one)
+    @baxter =  { :name => 'Fantasmal Four, Inc.',
+       :website => 'ff.com'
+    }
   end
 
   test "should get index" do
@@ -18,7 +21,7 @@ class CompaniesControllerTest < ActionController::TestCase
 
   test "should create company" do
     assert_difference('Company.count') do
-      post :create, :company => @company.attributes
+      post :create, :company => @baxter
     end
 
     assert_redirected_to company_path(assigns(:company))
