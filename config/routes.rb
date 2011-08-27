@@ -1,4 +1,6 @@
 Interviews::Application.routes.draw do
+  resources :postings
+
   resources :questions
 
   resources :companies
