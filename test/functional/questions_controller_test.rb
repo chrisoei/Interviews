@@ -52,4 +52,20 @@ class QuestionsControllerTest < ActionController::TestCase
 
     assert_redirected_to questions_path
   end
+
+  test "should not create non-unique name" do
+    question = Question.new(:name => questions(:one).name,
+                              :question => "abcxyz")
+    assert !question.save
+    assert_equal I18n.translate('activerecord.errors.messages.taken'),
+      question.errors[:name].join('; ')
+  end
+
+  test "should not create non-unique question" do
+    question = Question.new(:name => 'abcxyz123',
+                              :question => questions(:one).question) 
+    assert !question.save
+    assert_equal I18n.translate('activerecord.errors.messages.taken'),
+      question.errors[:question].join('; ')
+  end
 end
