@@ -14,7 +14,7 @@
 <% @postings.each do |posting| %>
   <tr>
     <td><%= posting.title %></td>
-    <td><%= posting.description %></td>
+    <td><%= truncate(strip_tags(posting.description), :length=>80) %></td>
     <td><%= posting.company %></td>
     <td><%= posting.date %></td>
     <td><%= link_to 'Show', posting %></td>
