@@ -27,7 +27,7 @@
 
 <p>
   <b>Note:</b>
-  <%= @company.note %>
+  <%= sanitize(@company.note) %>
 </p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
