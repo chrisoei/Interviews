@@ -1,0 +1,21 @@
+#generic_list h1 {
+  font: 150% sans-serif;
+  color: #226;
+  border-bottom: 3px solid #77d;
+}
+
+#generic_list table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+#generic_list .list_line_even {
+  background: #e0e0fd;
+}
+#generic_list .list_line_odd {
+  background: #c0f8f8;
+}
+
+#footer {
+  border-top: 3px solid #77d;
+}

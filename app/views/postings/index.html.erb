@@ -1,3 +1,4 @@
+<div id="generic_list">
 <h1>Listing postings</h1>
 
 <table>
@@ -12,7 +13,7 @@
   </tr>
 
 <% @postings.each do |posting| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= posting.title %></td>
     <td><%= truncate(strip_tags(posting.description), :length=>80) %></td>
     <td><%= posting.company %></td>
@@ -23,7 +24,8 @@
   </tr>
 <% end %>
 </table>
-
+</div>
+<div id='footer'>
 <br />
 
 <%= link_to 'New Posting', new_posting_path %>
@@ -31,4 +33,4 @@
 <%= link_to 'Companies', companies_path %>
 <br/>
 <%= link_to 'Questions', questions_path %>
-
+</div>
