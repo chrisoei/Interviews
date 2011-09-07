@@ -24,6 +24,12 @@
   <%= sanitize(@posting.note) %>
 </p>
 
+<p>
+  <b>Applied:</b>
+  <%= @posting.applied %>
+</p>
+<p>
+
 
 <%= link_to 'Edit', edit_posting_path(@posting) %> |
 <%= link_to 'Back', postings_path %>
