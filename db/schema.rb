@@ -10,37 +10,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110907011200) do
+ActiveRecord::Schema.define(:version => 20110907235550) do
 
   create_table "companies", :force => true do |t|
-    t.string   "name"
-    t.string   "website"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "coordinator_name"
-    t.string   "coordinator_email"
-    t.string   "coordinator_phone"
-    t.text     "note"
+    t.string    "name"
+    t.string    "website"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "coordinator_name"
+    t.string    "coordinator_email"
+    t.string    "coordinator_phone"
+    t.text      "note"
   end
 
   create_table "postings", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "company"
-    t.datetime "date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "note"
-    t.boolean  "applied"
+    t.string    "title"
+    t.text      "description"
+    t.string    "company"
+    t.timestamp "date"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.text      "note"
+    t.boolean   "applied"
+    t.integer   "company_id"
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "name"
-    t.text     "question"
-    t.text     "answer"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.text      "question"
+    t.text      "answer"
+    t.text      "notes"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
