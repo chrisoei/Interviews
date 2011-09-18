@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(:version => 20110908031218) do
 
   create_table "companies", :force => true do |t|
-    t.string    "name"
-    t.string    "website"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "coordinator_name"
-    t.string    "coordinator_email"
-    t.string    "coordinator_phone"
-    t.text      "note"
+    t.string   "name"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "coordinator_name"
+    t.string   "coordinator_email"
+    t.string   "coordinator_phone"
+    t.text     "note"
   end
 
   create_table "postings", :force => true do |t|
@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(:version => 20110908031218) do
   end
 
   create_table "questions", :force => true do |t|
-    t.string    "name"
-    t.text      "question"
-    t.text      "answer"
-    t.text      "notes"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.text     "question"
+    t.text     "answer"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

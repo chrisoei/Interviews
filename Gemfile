@@ -2,13 +2,15 @@ source 'http://rubygems.org'
 
 gem 'lock'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'formtastic'
 gem 'sqlite3'
+gem 'capybara'
+gem 'rspec-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
