@@ -21,7 +21,9 @@ describe Question do
   end
   
   it 'should create given valid attributes' do
-      @question = Question.create(@attr)
-      @question.should be_valid
-    end
+    @question = Question.create(@attr)
+    @question.should be_valid
+  end
+  
+  
 end
