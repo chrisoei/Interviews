@@ -1,7 +1,6 @@
 class Question < ActiveRecord::Base
-  validates_presence_of :name
-  validates_uniqueness_of :name
-  validates_presence_of :question
-  validates_uniqueness_of :question
+  attr_accessible :name, :question
+  validates :name, :presence => true, :uniqueness => true
+  validates :question, :presence => true, :uniqueness => true
   default_scope order("name")
 end

@@ -16,7 +16,7 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= posting.title %></td>
     <td><%= truncate(strip_tags(posting.description), :length=>80) %></td>
-    <td><%= link_to posting.company.name, posting.company %></td>
+    <td><%= link_to posting.company.name, posting.company if posting.company %></td>
     <td><%= posting.date %></td>
     <td><%= link_to 'Show', posting %></td>
     <td><%= link_to 'Edit', edit_posting_path(posting) %></td>

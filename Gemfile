@@ -10,6 +10,7 @@ gem 'rails', '3.1.0'
 gem 'formtastic'
 gem 'sqlite3'
 gem 'capybara'
+gem 'launchy'
 gem 'rspec-rails'
 
 # Use unicorn as the web server
