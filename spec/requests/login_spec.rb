@@ -14,6 +14,13 @@ describe 'Login' do
     page.should have_content('Unlocked!')
   end
   
+  it 'should disallow incorrect logins' do
+    visit lock_login_path
+    fill_in 'password', :with=>'incorrect'
+    click_on 'Unlock'
+    page.should_not have_content('Unlocked!')
+  end
+  
   describe 'When logged in' do
     before :each do
       visit lock_login_path
@@ -32,7 +39,7 @@ describe 'Login' do
     it 'should list postings' do
       click_on "Postings"
       page.should have_content("Listing postings")
-      save_and_open_page
+#      save_and_open_page
     end
   end
 end
