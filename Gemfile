@@ -12,6 +12,7 @@ gem 'sqlite3'
 gem 'capybara'
 gem 'launchy'
 gem 'rspec-rails'
+gem 'factory_girl'
 
 # Use unicorn as the web server
 # gem 'unicorn'
