@@ -25,6 +25,7 @@ class PostingsController < ApplicationController
   # GET /postings/new.xml
   def new
     @posting = Posting.new
+    @posting.company_id = session[:active_company_id]
 
     respond_to do |format|
       format.html # new.html.erb
